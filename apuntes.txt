@@ -1,0 +1,21 @@
+-- poner en  C:\xampp\apache\conf\extra\httpd-vhosts.conf
+<VirtualHost *:8080>
+	ServerName messenger.local
+	DocumentRoot "C:/xampp/htdocs/messenger/public"
+	<Directory "C:/xampp/htdocs/messenger/public">
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+
+c:\\Windows\System32\drivers\etc\hosts
+127.0.0.1       messenger.local
+
+
+comando :
+
+npm run dev
+
+php artisan make:auth
+
+npm i bootstrap-vue
