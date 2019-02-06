@@ -23,3 +23,5 @@ npm i bootstrap-vue
 php artisan migrate --seed
 
 php artisan make:seeder UsersTableSeeder
+
+php artisan migrate:fresh
