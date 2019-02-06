@@ -19,3 +19,7 @@ npm run dev
 php artisan make:auth
 
 npm i bootstrap-vue
+
+php artisan migrate --seed
+
+php artisan make:seeder UsersTableSeeder
