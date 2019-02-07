@@ -4,11 +4,22 @@
 <b-container>
     <b-row align-h="center">
         <b-col cols="8">
-            <b-card title="Inicio de sesion">
+            <b-card title="Inicio de sesion" class="my-3">
+                
+                @if($errors->any())
+                <b-alert show variant="danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </b-alert>
+                @else
                 <b-alert show>
                     Por favor ingresa tus datos:
                 </b-alert>
-                <form method="POST" action="{{ route('login') }}">
+                @endif
+                <b-form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                          <b-form-group
                                         label="Correo electronico:"
@@ -43,7 +54,7 @@
                              Olvidaste tu Contrasena
                          </b-button>   
 
-                    </form>
+                    </b-form>
             </b-card>
         
         </b-col>

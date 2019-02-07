@@ -14,7 +14,9 @@ c:\\Windows\System32\drivers\etc\hosts
 
 comando :
 
-npm run dev
+npm run dev  -- generar archivos 
+npm run watch   --> similar a nodemon
+
 
 php artisan make:auth
 
