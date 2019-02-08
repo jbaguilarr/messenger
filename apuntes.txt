@@ -27,3 +27,16 @@ php artisan migrate --seed
 php artisan make:seeder UsersTableSeeder
 
 php artisan migrate:fresh
+
+php artisan make:model Conversation -m
+
+php artisan make:model Message -m
+
+php artisan make:seeder ConversationsTableSeeder
+
+php artisan migrate:refresh --seed
+
+php artisan make:seeder MessagesTableSeeder
+
+php artisan make:controller ConversationController
+php artisan make:controller MessageController
